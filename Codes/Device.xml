@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTConnectDevices 
+    xmlns:m="urn:mtconnect.org:MTConnectDevices:1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="urn:mtconnect.org:MTConnectDevices:1.1" 
+    xsi:schemaLocation="urn:mtconnect.org:MTConnectDevices:1.1 http://www.mtconnect.org/schemas/MTConnectDevices_1.1.xsd">
+
+    <Header 
+        creationTime="2010-03-04T18:44:40+00:00" 
+        sender="localhost" 
+        instanceId="1" 
+        bufferSize="131072" 
+        version="1.1"/>
+
+    <Devices>
+        <Device id="air_compressor" name="air_compressor" uuid="001">
+            <DataItems>
+
+                <!-- Availability -->
+                <DataItem 
+                    category="EVENT" 
+                    id="avail" 
+                    name="avail" 
+                    type="AVAILABILITY"/>
+
+                <!-- Execution -->
+                <DataItem 
+                    category="EVENT" 
+                    id="e1" 
+                    name="execution" 
+                    type="EXECUTION"/>
+
+                <!-- Compressor State (MODEL OUTPUT) -->
+                <DataItem 
+                    category="EVENT"
+                    id="vs1" 
+                    name="compressor_state" 
+                    type="STATE"/>
+
+                <!-- Sound Level -->
+                <DataItem 
+                    category="SAMPLE" 
+                    id="spl" 
+                    name="sound_level" 
+                    type="SOUND_LEVEL" 
+                    units="DECIBEL"/>
+
+                <!-- Raw Audio Input -->
+                <DataItem
+                    category="SAMPLE"
+                    id="sensor0"
+                    name="sensor0"
+                    representation="TIME_SERIES"
+                    type="DISPLACEMENT"
+                    sampleRate="48000"/>
+
+		<DataItem 
+   		category="SAMPLE"
+    		id="rms"
+    		name="rms"
+    		type="LEVEL"/>
+
+            </DataItems>
+        </Device>
+    </Devices>
+</MTConnectDevices>
